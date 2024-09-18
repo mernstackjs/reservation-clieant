@@ -57,7 +57,7 @@ export default function CreateReservation() {
       const data = await res.json();
       if (res.ok) {
         alert("Reservation created successfully!");
-        navigate("/my-reservation");
+        navigate("/order");
       } else {
         alert("Error creating reservation: " + data.message);
       }
