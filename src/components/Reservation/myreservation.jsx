@@ -6,7 +6,7 @@ const MyReservation = () => {
   const [pin, setPin] = useState(""); // Initialize pin state
   const [error, setError] = useState(null); // State to capture any error
   const [reservation, setReservation] = useState(null); // State to hold reservation details
-
+  console.log(id, email);
   // Function to handle tracking the reservation
   const handleTrack = async () => {
     setError(null); // Clear previous errors
