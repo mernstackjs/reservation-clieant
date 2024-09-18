@@ -34,7 +34,7 @@ export default function CreateReservation() {
 
     try {
       const res = await fetch(
-        "http://localhost:3030/api/reservation/make-reservation",
+        "https://reservation-api-3ccd.onrender.com/api/reservation/make-reservation",
         {
           method: "POST",
           headers: {

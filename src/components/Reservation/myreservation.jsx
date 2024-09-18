@@ -13,7 +13,7 @@ const MyReservation = () => {
     try {
       // Make a POST request to the backend
       const response = await fetch(
-        `http://localhost:3030/api/reservation/track/${id}/${encodeURIComponent(
+        `https://reservation-api-3ccd.onrender.com/api/reservation/track/${id}/${encodeURIComponent(
           email
         )}`,
         {
