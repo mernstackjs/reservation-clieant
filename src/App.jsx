@@ -11,6 +11,7 @@ export default function App() {
         <Route path="/" element={<div>Home Page</div>} />
         <Route path="/make-reservation" element={<CreateReservation />} />
         <Route path="/ahmed" element={<div>AHmeD Page</div>} />
+        <Route path="/order" element={<div>Order</div>} />
         <Route path="/my-reservation/:id/:email" element={<Myreservation />} />
       </Routes>
     </div>
