@@ -10,6 +10,9 @@ const MyReservation = () => {
   // Function to handle tracking the reservation
   const handleTrack = async () => {
     setError(null); // Clear previous errors
+    console.log("Tracking reservation with ID:", id, "and email:", email); // Debugging log
+    console.log("Sending PIN:", pin); // Debugging log
+
     try {
       // Make a POST request to the backend
       const response = await fetch(
@@ -25,6 +28,9 @@ const MyReservation = () => {
         }
       );
 
+      console.log("Response status:", response.status); // Debugging log
+      console.log("Response headers:", response.headers); // Debugging log
+
       if (!response.ok) {
         // If response is not OK, throw an error
         const errorData = await response.json();
@@ -33,7 +39,9 @@ const MyReservation = () => {
 
       const data = await response.json(); // Parse the response JSON
       setReservation(data.reservation); // Set the reservation data
+      console.log("Reservation data:", data); // Debugging log
     } catch (err) {
+      console.error("Error:", err); // Debugging log
       setError(err.message); // Set error message if any
     }
   };
